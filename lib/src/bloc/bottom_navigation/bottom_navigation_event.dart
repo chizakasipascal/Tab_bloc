@@ -6,3 +6,11 @@ abstract class BottomNavigationEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+class TabChangeEvent extends BottomNavigationEvent {
+  final int newindex;
+  const TabChangeEvent(this.newindex);
+
+  @override
+  List<Object> get props => [newindex];
+}
