@@ -5,9 +5,19 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      body: const Center(
         child: Text("Home"),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        elevation: 0,
+        currentIndex: 1,
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.access_alarm_outlined), label: 'Alarme'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.supervised_user_circle_outlined), label: 'User')
+        ],
       ),
     );
   }
